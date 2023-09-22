@@ -1,6 +1,4 @@
-import { dAppName } from 'config';
 import { RouteType } from 'types';
-import { withPageTitle } from './components/PageTitle';
 
 import { Dashboard, Home, SignMessage, Statistics } from './pages';
 
@@ -44,15 +42,14 @@ export const routes: RouteWithTitleType[] = [
 
 export const mappedRoutes = routes.map((route) => {
   const title = route.title
-    ? `${route.title} • MultiversX ${dAppName}`
-    : `MultiversX ${dAppName}`;
+    ? `${route.title} • Entity Workshop`
+    : 'Entity Workshop';
 
   const requiresAuth = Boolean(route.authenticatedRoute);
-  const wrappedComponent = withPageTitle(title, route.component);
 
   return {
     path: route.path,
-    component: wrappedComponent,
+    component: route.component,
     authenticatedRoute: requiresAuth
   };
 });
