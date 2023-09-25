@@ -37,40 +37,15 @@
   ],
   "plugins": ["react-hooks", "prettier", "import"],
   "rules": {
-    "import/order": [
-      "warn",
-      {
-        "groups": ["builtin", "external", "internal"],
-        "pathGroups": [
-          {
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["react"],
-        "newlines-between": "ignore",
-        "alphabetize": {
-          "order": "asc",
-          "caseInsensitive": true
-        }
-      }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "lf"
-      }
-    ],
     "@typescript-eslint/indent": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/prop-types": "off",
     "react/display-name": "off",
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "object-curly-newline": "off",
     "arrow-body-style": "off",
@@ -86,6 +61,13 @@
     "react/destructuring-assignment": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["warn"],
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
+    "endOfLine": "off",
+    "prettier/prettier": [
+      "off",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }

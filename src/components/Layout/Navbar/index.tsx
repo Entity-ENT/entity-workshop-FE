@@ -11,12 +11,13 @@ import { logout } from 'helpers';
 import { useGetIsLoggedIn } from 'hooks';
 import { routeNames } from 'routes';
 import { ReactComponent as MultiversXLogo } from '../../../assets/img/multiversx.svg';
+import { doLogout } from "../CheckAuth";
 
 export const Navbar = () => {
   const isLoggedIn = useGetIsLoggedIn();
 
   const handleLogout = () => {
-    logout(`${window.location.origin}/unlock`);
+    doLogout();
   };
 
   return (
