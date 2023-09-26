@@ -20,8 +20,6 @@ const initialState = (): ContextState => {
 export const initUserSettings: User = {
   id: '',
   publicAddress: '',
-  email: '',
-  username: ''
 };
 
 export default initialState;
