@@ -15,7 +15,7 @@ export const BE_API = 'https://127.0.0.1:3000';
 /**
  * Calls to these domains will use `nativeAuth` Baerer token
  */
-export const sampleAuthenticatedDomains = [BE_API, TOOLS_API_URL];
+export const sampleAuthenticatedDomains = [BE_API];
 
 export const authCipherAlgorithm = process.env.REACT_APP_AUTH_CIPHER_ALGORITHM;
 export const authCipherPassword = process.env.REACT_APP_AUTH_CIPHER_PASSWORD;

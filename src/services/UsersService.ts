@@ -20,8 +20,6 @@ export class UsersService {
     }
 
     async checkUser(publicAddress: string): Promise<User> {
-        debugger;
-
         return (
             await axios.post<User>(
                 `${this._api}/user`,
