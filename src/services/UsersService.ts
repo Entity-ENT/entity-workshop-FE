@@ -25,32 +25,11 @@ export class UsersService {
                 `${this._api}/user`,
                 { publicAddress },
                 {
-                    baseURL: BE_API,
                     headers: {
                         Authorization:
                             "Bearer " +
                             LocalStorageService.getItem(LocalStorageKeys.userAuthToken),
                     },
-                },
-            )
-        ).data;
-    }
-
-    async updateEmail(userId: string, email: string): Promise<User> {
-        return (
-            await axios.put<User>(
-                `${this._api}/user/${userId}/email`,
-                { email },
-            )
-        ).data;
-    }
-
-    async updateUsername(userId: string, username: string): Promise<User> {
-        return (
-            await axios.put<User>(
-                `${this._api}/user/${userId}/username`,
-                {
-                    username,
                 },
             )
         ).data;
